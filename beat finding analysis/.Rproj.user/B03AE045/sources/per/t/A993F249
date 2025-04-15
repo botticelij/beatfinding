@@ -1,0 +1,27 @@
+{
+    "id": "A993F249",
+    "path": "~/Desktop/analysis/get-data.R",
+    "project_path": "get-data.R",
+    "type": "r_source",
+    "hash": "3890480285",
+    "contents": "",
+    "dirty": false,
+    "created": 1743517716253.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "23,7",
+        "scrollLine": "15"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1743540276,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1743540276315,
+    "read_only": false,
+    "read_only_alternatives": []
+}

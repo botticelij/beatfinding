@@ -1,0 +1,44 @@
+################################################################################
+# Script: Supporting methods for preparing tapping data
+################################################################################
+
+# Parse and sort JSON data
+sort_json <- function(x) {
+  jsonlite::stream_in(textConnection(gsub("\\n", "", x)))
+}
+
+# Unpack JSON column and combine with original data
+unpack_json_column <- function(data, column_to_unpack) {
+  column_unpacked <- sort_json(column_to_unpack)
+  data_unpacked <- as_tibble(cbind(data, column_unpacked), .name_repair = "universal")
+  return(data_unpacked)
+}
+
+
+# Function to convert raw data into data ready for analysis
+prepare_trial_data <- function(data_trial) {
+  
+  data_trial_select = data_trial %>% 
+    # select only columns I want
+    select(
+      id, participant_id, node_id, network_id, trial_maker_id, 
+      analysis_raw = analysis
+    )
+  
+  # Unpack JSON dictionary stored in analysis_raw
+  data_trial_select$analysis_raw[is.na(data_trial_select$analysis_raw)] <- "{}"
+  data_trial_unpacked = unpack_json_column(data_trial_select, data_trial_select$analysis_raw) 
+  
+  # Unpack JSON dictionary stored in analysis
+  data_trial_unpacked$analysis[is.na(data_trial_unpacked$analysis)] <- "{}"
+  data_trial_re_unpacked = unpack_json_column(data_trial_unpacked, data_trial_unpacked$analysis) 
+  
+  final_data <- data_trial_re_unpacked %>% 
+    # remove columns I don't want
+    select(-analysis_raw, -analysis)
+  
+  return(final_data)
+}
+
+
+
