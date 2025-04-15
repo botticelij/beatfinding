@@ -1,9 +1,0 @@
-vars,creation_time,local_key,trial_id,asset_id,type,class,object_type
-{},2025-04-13 15:43:12,recording_analysis_plot,1,8,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:44:32,recording_analysis_plot,2,10,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:41:34,stimulus_audio,1,1,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:43:03,stimulus_audio,2,3,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:41:34,stimulus_info,1,2,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:43:03,stimulus_info,2,4,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:43:03,trial_main_page,1,7,AssetTrial,AssetTrial,AssetTrial
-{},2025-04-13 15:44:27,trial_main_page,2,9,AssetTrial,AssetTrial,AssetTrial

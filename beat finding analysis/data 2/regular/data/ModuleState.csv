@@ -1,2 +1,0 @@
-vars,creation_time,failed,failed_reason,time_of_death,id,module_id,participant_id,time_started,time_finished,time_aborted,started,finished,aborted,type,class,object_type
-{},2025-04-13 15:41:19,False,,,1,repp_volume_calibration_music,1,2025-04-13 15:41:19,2025-04-13 15:41:32,,True,True,False,ModuleState,ModuleState,ModuleState
